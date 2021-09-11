@@ -11,24 +11,22 @@ public class App
 {
     public static void main( String[] args ) {
 
+        Scanner scan = new Scanner(System.in);
+
         System.out.print("Enter the principal: ");
-        Scanner principal = new Scanner(System.in);
-        int principal1 = principal.nextInt();
+        int principal = scan.nextInt();
 
         System.out.print("Enter the rate of interest: ");
-        Scanner interest = new Scanner(System.in);
-        double interest1 = interest.nextDouble();
+        double interest = scan.nextDouble();
 
         System.out.print("Enter the number of years: ");
-        Scanner years = new Scanner(System.in);
-        int years1 = years.nextInt();
+        int years = scan.nextInt();
 
-        double totalinvest = principal1 * (1 + ((interest1 / 100) * 4));
+        double totalinvest = principal * (1 + ((interest / 100) * 4));
 
         int finalinvest = (int)totalinvest;
 
-        System.out.print("After "+years1+" years at "+interest1+"%, the investment will be worth $"+finalinvest+".");
-
+        System.out.print("After "+years+" years at "+interest+"%, the investment will be worth $"+finalinvest+".");
 
     }
 }
